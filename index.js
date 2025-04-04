@@ -4,7 +4,7 @@ const Book = require("./models/books.models")
 
 
 const express = require("express")
-const cors = requires("cors")
+const cors = require("cors")
 const app = express()
 app.use(express.json())
 
