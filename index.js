@@ -4,11 +4,17 @@ const Book = require("./models/books.models")
 
 
 const express = require("express")
-const cors = require("cors")
 const app = express()
-app.use(cors())
 app.use(express.json())
 
+const cors = require("cors");
+const corsOptions = {
+  origin: "*",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 
 const PORT = 3000
